@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assignment2.css" />
+    <title>Rock, paper and scissors</title>
+  </head>
+  <body>
+    <section class="game">
+      <div class="score">
+        <div class="player-score">
+          <h2>PLAYER</h2>
+          <p>0</p>
+        </div>
+        <div class="computer-score">
+          <h2>COMPUTER</h2>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="circle"></div>
+      <div class="intro">
+        <h1><span>Rock</span><br/><span>Paper</span>and<br/><span>Scissors</span></h1>
+        <button id ="button">Let's Play</button>
+      </div>
+      <div class="hands1">
+        <img class="player-hand1" src="rock.png" alt="" />
+        <img class="computer-hand1" src="rock.png" alt="" />
+      </div>
+
+      <div class="match fadeOut">
+        <h2 class="winner">Choose an option</h2>
+        <div class="hands">
+          <img class="player-hand" src="rock.png" alt="" />
+          <img class="computer-hand" src="rock.png" alt="" />
+        </div>
+        <div class="options">
+          <button class="rock">rock</button>
+          <button class="paper">paper</button>
+          <button class="scissors">scissors</button>
+        </div>
+      </div>
+
+      <div class="outtro fadeOut">
+        <h2 class = "winner"> Game Over</h2>
+        <p class = "winner_info"></p>
+        <button class ="button2">Play again</button>
+      </div>
+    </section>
+    <footer>
+      <p>Project done by Mimi, 2020</p>
+  </footer>
+    <script src="assignment2.js"></script>
+  </body>
+</html>

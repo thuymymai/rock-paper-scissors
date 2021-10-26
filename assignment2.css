@@ -1,0 +1,234 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section{
+  height: 130vh;
+  background-color: #A0CBA4;
+}
+/* Display Player score and Computer Score */
+.score{
+  padding-top: 10px;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+}
+.score h2{
+  color: #3d6d41;
+  font-size: 30px;
+}
+.score p{
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  color: #cc3300;
+  font-weight: bold;
+}
+
+/*Something nice for the intro screen */
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+.circle {
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  background: #4E8953;
+  margin-top: 60px;
+}
+.intro{
+  height: 70vh;
+  align-items: center;
+  font-family: 'Lobster', cursive;
+  display: flex;
+  flex-direction: column;
+}
+.intro h1 {
+  color: #D5E2D6;
+  text-align: center;
+  line-height: 50px;
+  margin-top: -260px;
+  -moz-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+-webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+-o-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+-ms-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+  /*-----------------------*/
+  text-shadow: 1px 1px #4A744D, 2px 2px #4A744D, 3px 3px #4A744D, 4px 4px #4A744D, 5px 5px #4A744D, 6px 6px #4A744D, 7px 7px #4A744D, 8px 8px #4A744D, 9px 9px #4A744D, 10px 10px #4A744D, 11px 11px #4A744D, 12px 12px #4A744D, 13px 13px #4A744D, 14px 14px #4A744D, 15px 15px #4A744D, 16px 16px #4A744D, 17px 17px #4A744D, 18px 18px #4A744D, 19px 19px #4A744D, 20px 20px #4A744D, 21px 21px #4A744D, 22px 22px #4A744D, 23px 23px #4A744D, 24px 24px #4A744D, 25px 25px #4A744D, 26px 26px 6px #06520C;
+}
+span:nth-child(3){ 
+  font-size: 60px;
+}
+span:nth-child(4){
+  color:#cc3300;
+  font-size: 30px; 
+}
+span:nth-child(1), span:nth-child(2), span:nth-child(5) {
+  font-size: 100px;
+}
+.intro button {
+  width: 150px;
+  height: 50px;
+  background-color: #4E8953;
+  border: none;
+  color: #D5E2D6;
+  font-size: 20px;
+  border-radius: 3px; 
+  cursor: pointer;
+  float: center;
+  font-weight: bold;
+  margin-top: 150px;
+}
+/* Display the hands also in the intro */
+.hands1{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -600px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.player-hand1{
+  transform: rotateY(180deg);
+  float: left;
+}
+.computer-hand1{
+  float: right;
+}
+/* Begin the match */
+.match, .outtro{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+  align-items: center;
+}
+.match button{
+  width: 150px;
+  height: 50px;
+  background-color: #4E8953;
+  border: none;
+  color: #D5E2D6;
+  font-size: 20px;
+  border-radius: 3px; 
+  cursor: pointer;
+  float: center;
+  font-weight: bold;
+}
+.outtro button{
+  width: 150px;
+  height: 50px;
+  background-color: #4E8953;
+  border: none;
+  color: #D5E2D6;
+  font-size: 20px;
+  border-radius: 3px; 
+  cursor: pointer;
+  float: center;
+  font-weight: bold;
+  margin-top: 80px;
+  margin-left: 100px;
+}
+.outtro p {
+  margin-top: 50px;;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Lobster';
+  text-align: center;
+  color: #16301d;
+}
+.winner {
+  color: #cc3300;
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Lobster';
+}
+.hands ,
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-hand {
+  transform: rotateY(180deg);
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+@keyframes shakePlayer {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  25% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  65% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  85% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-50px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+footer{
+  background-color: #A0CBA4;;
+	padding: 0;
+	margin-top: auto;
+	color: white;
+	text-align: center;
+	font-family: "Lucida Console", "Monaco", "momospace";
+}
